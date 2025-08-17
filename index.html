@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Construcción | Pinta y Limpia</title>
+    <!-- Incluyendo la librería de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Incluyendo nuestro archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md rounded-b-lg mb-8">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Pinta y Limpia</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#servicios" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Servicios</a>
+                <a href="#precios" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Precios</a>
+                <a href="#galeria" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Galería</a>
+                <a href="#contacto" class="text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out">Contacto</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md rounded-b-lg px-4 pb-4">
+            <a href="#servicios" class="block py-2 text-gray-600 hover:text-blue-600">Servicios</a>
+            <a href="#precios" class="block py-2 text-gray-600 hover:text-blue-600">Precios</a>
+            <a href="#galeria" class="block py-2 text-gray-600 hover:text-blue-600">Galería</a>
+            <a href="#contacto" class="block py-2 text-gray-600 hover:text-blue-600">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Contenido principal (sección de SPA) -->
+    <div id="main-content">
+        <main class="container mx-auto px-4">
+
+            <!-- Sección de Héroe -->
+            <section class="bg-blue-600 text-white rounded-xl shadow-lg p-10 md:p-20 text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforma tu Espacio con Nosotros</h1>
+                <p class="text-lg md:text-xl mb-8">Expertos en pintura y limpieza para hogares y oficinas.</p>
+                <a href="#contacto" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out">
+                    ¡Solicita una Cotización!
+                </a>
+            </section>
+
+            <!-- Sección de Servicios -->
+            <section id="servicios" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Nuestros Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Tarjeta de Servicio 1: Pintura de Interiores -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Pintura de Interiores"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Pintura+Interior"
+                        data-description="Transformamos tus espacios interiores con un servicio de pintura profesional y meticuloso. Nos especializamos en preparar las superficies, aplicar capas uniformes de pintura de alta calidad y ofrecer un acabado perfecto. Ya sea para una sola habitación o para toda la casa, nuestro equipo se asegura de que cada detalle sea impecable, desde la protección de tus muebles hasta la limpieza final."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Interior+1,https://placehold.co/600x400/2563EB/ffffff?text=Interior+2,https://placehold.co/600x400/2563EB/ffffff?text=Interior+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Pintura+Interior" alt="Pintura de Interiores" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pintura de Interiores</h3>
+                        <p class="text-gray-600">Renovamos tus espacios con acabados de alta calidad y una amplia gama de colores. ¡Tu hogar lucirá como nuevo!</p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 2: Pintura de Exteriores -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Pintura de Exteriores"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Pintura+Exterior"
+                        data-description="Protege y embellece tu propiedad con nuestra pintura de exteriores. Utilizamos productos resistentes a la intemperie y a los rayos UV para asegurar un acabado duradero y que no se decolore. Nuestro proceso incluye la limpieza profunda de la superficie, la reparación de grietas y el sellado para garantizar una aplicación perfecta y una protección máxima."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Exterior+1,https://placehold.co/600x400/2563EB/ffffff?text=Exterior+2,https://placehold.co/600x400/2563EB/ffffff?text=Exterior+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Pintura+Exterior" alt="Pintura de Exteriores" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pintura de Exteriores</h3>
+                        <p class="text-gray-600">Protegemos tu propiedad del clima y el paso del tiempo con pinturas duraderas y resistentes.</p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 3: Limpieza Profunda -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Limpieza Profunda"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Limpieza+Profunda"
+                        data-description="Nuestro servicio de limpieza profunda abarca todos los rincones de tu hogar u oficina. Nos encargamos de la desinfección de baños y cocinas, limpieza de cristales, aspirado de alfombras, y eliminación de polvo en áreas de difícil acceso. Dejamos tus espacios relucientes y con un ambiente de frescura y pureza."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Limpieza+1,https://placehold.co/600x400/2563EB/ffffff?text=Limpieza+2,https://placehold.co/600x400/2563EB/ffffff?text=Limpieza+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Limpieza+Profunda" alt="Limpieza Profunda" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Limpieza Profunda</h3>
+                        <p class="text-gray-600">Dejamos tu hogar impecable, desde la desinfección de baños hasta la limpieza de cristales y alfombras.</p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 4: Mantenimiento de Jardines -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Mantenimiento de Jardines"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Jardineria"
+                        data-description="Ofrecemos servicios completos de jardinería para mantener tu espacio exterior en perfectas condiciones. Esto incluye poda de árboles y arbustos, corte de césped, instalación de sistemas de riego, y control de plagas y enfermedades. Un jardín bien cuidado mejora la estética de tu propiedad y te permite disfrutar de un entorno natural."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Jardin+1,https://placehold.co/600x400/2563EB/ffffff?text=Jardin+2,https://placehold.co/600x400/2563EB/ffffff?text=Jardin+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Jardineria" alt="Mantenimiento de Jardines" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mantenimiento de Jardines</h3>
+                        <p class="text-gray-600">Cuidamos de tu jardín para que luzca siempre verde y saludable. Poda, riego, y control de plagas.</p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 5: Remodelaciones Menores -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Remodelaciones Menores"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Remodelaciones"
+                        data-description="Realizamos pequeñas remodelaciones que hacen una gran diferencia en la funcionalidad y el aspecto de tus espacios. Desde la instalación de nuevos suelos o azulejos, cambios de grifería y luminarias, hasta la optimización de espacios de almacenamiento. Somos el aliado perfecto para esos proyectos que transforman tu hogar sin necesidad de una obra mayor."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Remodelacion+1,https://placehold.co/600x400/2563EB/ffffff?text=Remodelacion+2,https://placehold.co/600x400/2563EB/ffffff?text=Remodelacion+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Remodelaciones" alt="Remodelaciones Menores" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Remodelaciones Menores</h3>
+                        <p class="text-gray-600">Pequeños trabajos de remodelación que marcan una gran diferencia. Instalación de suelos, cambios de grifería, etc.</p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 6: Trabajos de Albañilería -->
+                    <div class="service-item bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer"
+                        data-title="Trabajos de Albañilería"
+                        data-image="https://placehold.co/600x400/2563EB/ffffff?text=Albanileria"
+                        data-description="Contamos con profesionales experimentados en trabajos de albañilería para proyectos de construcción y reparación. Desde la construcción de muros, pavimentos, escaleras o pequeñas estructuras, hasta la reparación de daños estructurales y la aplicación de mortero. Ofrecemos soluciones sólidas y seguras para tus necesidades de construcción."
+                        data-images="https://placehold.co/600x400/2563EB/ffffff?text=Albanileria+1,https://placehold.co/600x400/2563EB/ffffff?text=Albanileria+2,https://placehold.co/600x400/2563EB/ffffff?text=Albanileria+3">
+                        <img src="https://placehold.co/600x400/2563EB/ffffff?text=Albanileria" alt="Trabajos de Albañilería" class="rounded-lg mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Trabajos de Albañilería</h3>
+                        <p class="text-gray-600">Construcción y reparación de muros, pavimentos, y otras estructuras. Profesionales a tu servicio.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Precios (Ejemplo) -->
+            <section id="precios" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Precios Estimados</h2>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Servicio</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unidad</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio Estimado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pintura de Interiores</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">por m²</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$5 - $10</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pintura de Exteriores</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">por m²</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$8 - $15</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Limpieza Profunda</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">por hora</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$20 - $35</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Remodelaciones</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">a convenir</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">¡Cotización gratis!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-4">Los precios son estimados. Para una cotización precisa, contáctanos.</p>
+            </section>
+
+            <!-- Sección de Galería -->
+            <section id="galeria" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Nuestros Proyectos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Cada imagen de la galería ahora tiene un `data-project-id` para identificar el proyecto -->
+                    <img src="https://placehold.co/600x400/4F46E5/ffffff?text=Pintura+Exterior" alt="Proyecto de pintura de casa" class="gallery-item rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-project-id="exterior-paint">
+                    <img src="https://placehold.co/600x400/4F46E5/ffffff?text=Limpieza+Oficina" alt="Proyecto de limpieza de oficina" class="gallery-item rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-project-id="office-cleaning">
+                    <img src="https://placehold.co/600x400/4F46E5/ffffff?text=Remodelacion+Cocina" alt="Remodelación de cocina" class="gallery-item rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-project-id="kitchen-remodel">
+                    <img src="https://placehold.co/600x400/4F46E5/ffffff?text=Pintura+Interior+Sala" alt="Pintura de fachada" class="gallery-item rounded-lg shadow-md w-full h-auto object-cover transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-project-id="living-room-paint">
+                </div>
+            </section>
+
+            <!-- Sección de Contacto -->
+            <section id="contacto" class="mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Contáctanos</h2>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-lg mx-auto">
+                    <!-- El atributo "action" ahora apunta a un endpoint de Formspree -->
+                    <form id="contact-form" action="https://formspree.io/f/xjkodgap" method="POST">
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono (opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje / Descripción del Proyecto</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
+                            Enviar Cotización
+                        </button>
+                        <!-- Mensaje de confirmación -->
+                        <div id="confirmation-message" class="hidden mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative" role="alert">
+                            <span class="block sm:inline">¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.</span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal para Servicios -->
+        <div id="service-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onclick="closeServiceModal()">
+            <div class="bg-white rounded-lg p-6 max-w-4xl w-full mx-auto relative" onclick="event.stopPropagation()">
+                <button id="close-service-modal-btn" class="absolute top-2 right-4 text-gray-800 text-4xl leading-none font-light hover:text-gray-600">&times;</button>
+                <h3 id="service-modal-title" class="text-2xl font-bold text-gray-800 mb-4 text-center"></h3>
+                <div class="md:flex gap-6">
+                    <div class="md:w-1/2 mb-4 md:mb-0">
+                        <img id="service-modal-image" src="" alt="Imagen principal del servicio" class="rounded-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p id="service-modal-description" class="text-gray-700 mb-6"></p>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Proyectos relacionados</h4>
+                        <div id="service-modal-gallery" class="grid grid-cols-3 gap-2">
+                            <!-- Las imágenes se insertarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fin del main-content -->
+
+    <!-- Página de Proyecto Individual (Inicialmente oculta) -->
+    <div id="project-page" class="container mx-auto px-4 mt-8">
+        <button id="back-btn" class="flex items-center text-blue-600 hover:text-blue-800 transition duration-300 mb-6">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Volver a la Galería
+        </button>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-10">
+            <h1 id="project-title" class="text-4xl font-bold text-gray-800 mb-4 text-center md:text-left"></h1>
+            
+            <img id="project-main-image" src="" alt="Imagen principal del proyecto" class="rounded-lg w-full h-auto object-cover mb-6">
+            
+            <p id="project-description" class="text-gray-700 leading-relaxed mb-8"></p>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Más imágenes del proyecto</h2>
+            <div id="project-gallery" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Imágenes de la galería se insertarán aquí dinámicamente -->
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="#contacto" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    ¡Hablemos de tu Proyecto!
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 rounded-t-lg mt-8">
+        <p class="text-sm">&copy; 2024 Pinta y Limpia. Todos los derechos reservados.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.542-1.333h2.458v-5h-3.397c-3.697 0-5.603 2.146-5.603 5.603v2.397z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.447.762-.68 1.642-.68 2.579 0 1.782.956 3.351 2.417 4.269-.844-.029-1.671-.26-2.384-.621v.08c0 2.68 1.905 4.907 4.434 5.421-.469.129-.96.195-1.464.195-.359 0-.719-.04-.1.117.925 2.806 3.654 4.863 6.892 4.908-1.916 1.517-4.148 2.454-6.617 2.454-.431 0-.859-.025-1.279-.074 2.985 1.794 6.516 2.84 10.327 2.84 12.339 0 19.143-10.154 18.991-18.151.859-.625 1.603-1.398 2.228-2.316z"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Incluyendo nuestro archivo JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
